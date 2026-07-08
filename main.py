@@ -252,15 +252,12 @@ def get_vehicle_details(rc_number: str, device: Dict[str, str]) -> dict:
 def home():
     return jsonify({
         "service": "🚗 Vehicle Info API",
-        "version": "3.0",
         "developer": COPYRIGHT_STRING,
-        "api_key": key_manager.api_key,
         "daily_limit": DAILY_LIMIT,
         "reset_time": "12:05 AM IST",
         "timezone": "Asia/Kolkata (IST)",
         "endpoints": {
-            "/lookup": "GET - Lookup vehicle details (requires ?rc= & ?key=GO)",
-            "/reset": "POST - Force reset usage counter (admin only)"
+            "/lookup": "GET - Lookup vehicle details (requires ?rc= & ?key=GO)"
         },
         "example": "/lookup?rc=MH01XX1234&key=GO"
     })
